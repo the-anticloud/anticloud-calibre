@@ -1,288 +1,68 @@
 # CALIBRE
 
-**Category:** MOVIES_MEDIA
-**Status:** Active development with Anticloud overlay
+> Anticloud offline package — upstream: kovidgoyal/calibre @ `master`.
 
 ## What This Project Does
 
-CALIBRE is an open-source project in the MOVIES_MEDIA category.
+The official source code repository for the calibre ebook manager
 
-This project provides tools, libraries, and functionality for developers
-and end users working in the MOVIES_MEDIA domain. It is part of the
-Anticloud ecosystem, which adds measured performance improvements,
-security hardening, and comprehensive documentation to upstream
-open-source projects.
+**Topics:** calibre, ebook, ebook-formats, ebook-manager, ebook-reader, ebooks, epub, epub-generation, kindle, python
 
-The project addresses key challenges in MOVIES_MEDIA by providing:
+## Upstream README
 
-- A well-tested, community-driven codebase
-- Standard interfaces compatible with the broader ecosystem
-- Documentation and examples for common use cases
-- Integration points for the Anticloud overlay improvements
+# calibre
 
-## Installation
+<img align="left" src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" height="200" width="200"/>
 
-### Prerequisites
+calibre is an e-book manager. It can view, convert, edit and catalog e-books 
+in all of the major e-book formats. It can also talk to e-book reader 
+devices. It can go out to the internet and fetch metadata for your books. 
+It can download newspapers and convert them into e-books for convenient 
+reading. It is cross platform, running on Linux, Windows and macOS.
 
-Before installing CALIBRE, ensure you have the following:
+For more information, see the [calibre About page](https://calibre-ebook.com/about).
 
-- A compatible operating system (Linux, macOS, or Windows)
-- Required build tools as specified by the upstream project
-- Runtime dependencies per the upstream requirements
+[![Build Status](https://github.com/kovidgoyal/calibre/workflows/CI/badge.svg)](https://github.com/kovidgoyal/calibre/actions?query=workflow%3ACI)
 
-### From Source
+## Screenshots  
 
-To build from source, source the project and follow the
-upstream build instructions:
-
-```bash
-git source https://github.com/kovidgoyal/calibre/calibre.git
-cd calibre
-# Follow upstream build system (Makefile, CMake, setup.py, etc.)
-make
-sudo make install
-```
-
-### Package Managers
-
-Depending on your platform, CALIBRE may be available
-through package managers such as apt, brew, or pip. Refer to
-the upstream documentation for platform-specific instructions.
+[Screenshots page](https://calibre-ebook.com/demo)
 
 ## Usage
 
-### Basic Usage
+See the [User Manual](https://manual.calibre-ebook.com).
 
-After installation, CALIBRE can be invoked as follows:
+## Development
 
-```bash
-# Display help and available options
-calibre --help
+[Setting up a development environment for calibre](https://manual.calibre-ebook.com/develop.html).
 
-# Run with default configuration
-calibre
-`
+A [tarball of the source code](https://calibre-ebook.com/dist/src) for the 
+current calibre release.
 
-### Common Operations
+## Bugs
 
-The following are common operations for CALIBRE:
+Bug reports and feature requests should be made in the calibre bug tracker at [Launchpad](https://bugs.launchpad.net/calibre).
+GitHub is only used for code hosting and pull requests.
 
-1. **Initialization** - Set up the project environment and configuration
-2. **Execution** - Run the main functionality with appropriate parameters
-3. **Monitoring** - Check status and output during operation
-4. **Shutdown** - Cleanly terminate and save state
+## Support calibre
 
-### Examples
+calibre is a result of the efforts of many volunteers from all over the world.
+If you find it useful, please consider contributing to support its development.
+[Donate to support calibre development](https://calibre-ebook.com/donate).
 
-```bash
-# Example 1: Basic invocation
-calibre --input /path/to/input --output /path/to/output
+## Building calibre binaries
 
-# Example 2: With custom configuration
-calibre --config /path/to/config.yaml
+See [Build instructions](bypy/README.rst) for instructions on how to build the
+calibre binaries and installers for all the platforms calibre supports.
 
-# Example 3: Verbose mode for debugging
-calibre --verbose --log-level debug
-`
+## calibre package versions in various repositories
 
-## API
-
-### Overview
-
-CALIBRE exposes a standard API consistent with its category.
-The API can be accessed programmatically or through the command
-line interface.
-
-### Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /status | Get current status |
-| POST | /execute | Execute main operation |
-| GET | /results | Retrieve results |
-| DELETE | /reset | Reset to initial state |
-
-### Authentication
-
-API authentication is handled through standard mechanisms.
-Refer to the upstream documentation for specific authentication
-requirements and token management.
-
-### Rate Limiting
-
-The API implements rate limiting to prevent abuse. Default limits
-are configurable through the configuration file.
-
-## Dependencies
-
-### Build Dependencies
-
-- Compiler (GCC, Clang, or MSVC)
-- Build system (Make, CMake, or Meson)
-- Package manager (pip, npm, or cargo)
-
-### Runtime Dependencies
-
-Runtime dependencies are managed by the upstream project build
-system. Key dependencies include:
-
-- Standard library components
-- Third-party libraries as specified in upstream documentation
-- System libraries required for operation
-
-### Optional Dependencies
-
-Some features may require additional optional dependencies.
-These are documented in the upstream README and can be
-installed separately as needed.
-
-## Configuration
-
-### Configuration File
-
-CALIBRE uses a configuration file for runtime settings.
-The default location is typically:
-
-- **Linux/macOS:** ~/.config/calibre/config.yaml
-- **Windows:** %APPDATA%\calibre\config.yaml
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| log_level | string | info | Logging verbosity |
-| output_dir | string | ./output | Output directory |
-| max_workers | int | 4 | Maximum worker threads |
-| timeout | int | 30 | Operation timeout (seconds) |
-
-### Environment Variables
-
-The following environment variables can override configuration:
-
-- **CALIBRE_LOG_LEVEL** - Override log level
-- **CALIBRE_CONFIG** - Path to custom config file
-- **CALIBRE_OUTPUT** - Override output directory
-
-## Contributing
-
-Contributions to CALIBRE are welcome. Please follow
-these guidelines:
-
-1. **Fork the project** and create a feature branch
-2. **Make your changes** with clear commit messages
-3. **Add tests** for new functionality
-4. **Update documentation** as needed
-5. **Submit a pull request** with a clear description
-
-### Code Style
-
-Follow the code style established in the upstream project.
-Use consistent formatting, meaningful variable names, and
-clear comments for complex logic.
-
-### Reporting Issues
-
-When reporting issues, please include:
-
-- Operating system and version
-- Project version or commit hash
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant log output
+[![Packaging Status](https://repology.org/badge/vertical-allrepos/calibre.svg?columns=3&header=calibre)](https://repology.org/project/calibre/versions)
 
 ## License
 
-**Overlay license:** Anticommons 0.1.0
-**Upstream license:** MIT
+Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
 
-This project is distributed under the MIT license.
-The Anticloud overlay is licensed under Anticommons 0.1.0,
-which ensures that improvements remain available to the
-community while preventing enclosure by any single entity.
+## Verification
 
-See the LICENSE file in the project root for the full
-license text and additional terms.
-
-## Upstream
-
-**SHA-256:** pending resolution
-
-The upstream project is pinned to the above commit hash
-to ensure reproducible builds and verifiable provenance.
-All measurements and benchmarks are taken against this
-specific commit.
-
-## Benchmarks
-
-Measured by the Anticloud assurance suite. Every value below is read from this
-project's `BENCH.json`, produced by a real run — the SHA3-256 of that file is
-`2030f831f99cc07eef886d0cdcdbc9a41fbfca90246be7b6c93d82c7a9fb7c9e`.
-
-| Framework | Controls | Evidence | Coverage | Result |
-|---|---|---|---|---|
-| OWASP Top 10 for LLM Applications | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| OWASP Top 10 (2021) | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| SOC 2 Type II readiness | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| NIST AI Risk Management Framework | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| NIST SP 800-53 Rev. 5 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| NIST Cybersecurity Framework 2.0 | 8 controls mapped | 8 with evidence | 100.0% | PASS |
-| FedRAMP Rev. 5 | 10 controls mapped | 10 with evidence | 100.0% | PASS |
-| PCI DSS v4.0.1 | 11 controls mapped | 11 with evidence | 100.0% | PASS |
-| ISO/IEC 27001:2022 | 9 controls mapped | 9 with evidence | 100.0% | PASS |
-| MITRE ATT&CK v16 | 12 controls mapped | 12 with evidence | 100.0% | PASS |
-| ML Technology Readiness Level | TRL 8 | 8/8 criteria | | PASS |
-
-**Overall: 16/16 checks passing.**
-
-See `ISOLATED_LAB_RESULTS/03_Result_Register.md` for the 16-check register with pass condition, command and observed value per check.
-
-Framework folders in `OFFICIAL_BENCHMARKS/` state the control set and the
-evidence source bound to each control. This project does not claim an audit
-opinion, a SOC report, a FedRAMP authorisation or a PCI attestation — those are
-issued by an independent assessor.
-
-## Additional Information
-
-This project is part of the Anticloud ecosystem, providing
-MOVIES_MEDIA functionality with measured performance characteristics.
-
-The overlay adds 12 improvements including:
-
-- Performance optimizations
-- Security hardening
-- Documentation generation
-- Benchmark measurement
-- License compliance
-- Dependency auditing
-- SBOM generation
-- Seal verification
-- Quality gates
-- Contamination detection
-- Press distribution
-- Family background integration
-
-For more information about the Anticloud project, visit
-the main project or contact the maintainers.
-
-## Archives and Permanent Records
-
-| Platform | Identifier | Volume |
-|---|---|---|
-| Harvard Dataverse | DOI 10.7910/DVN/YMJKOG | 145 citable datasets |
-| AIOSS verification kit | DOI 10.7910/DVN/OORKNJ | Offline hash verification |
-| Zenodo (CERN) | — | 146 records, DOI-registered |
-| OSF | — | 144 preregistered records |
-| Figshare | author 20849885 | Research data and figures |
-| Internet Archive | aioss-format, Anticode | Permanent binary specification |
-| ORCID | 0009-0009-2233-6107 | Permanent researcher ID |
-| Kaggle | pax-millennium-20 | Reproducible T4 benchmark run |
-
-
-
-## Press and Independent Publication
-
-The PAX benchmark release was distributed by Newsfile wire to 336 outlets
-(312 Web, 23 Terminal, 1 Application), including Yahoo Finance, The Globe and Mail, Business Insider, National Post, Financial Post, StreetInsider, Digital Journal, Barchart, International Business Times, and fox47 · National Law Review.
-Wire distribution makes the announcement dated, public, and indexed, which
-makes the claim checkable.
-
+Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
